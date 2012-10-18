@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+
+
+{% block content %}
+
+        <h1>{% if 404 == code %}404 Error{% else %}An error occurred{% endif %}</h1>
+ 
+        {% if 404 == code %}
+            <p>Page not found.</p>
+        {% else %}
+            <p>Something went wrong.</p>
+        {% endif %}
+
+        {{ message }}
+{% endblock %}
