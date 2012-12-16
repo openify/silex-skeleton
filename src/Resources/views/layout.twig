@@ -1,31 +1,73 @@
 <!doctype html>
-<head>
-    <meta charset="utf-8">
-    <title>Silex Skeleton</title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Silex Skeleton</title>
 
-    <link href="{{ app.request.basepath }}/css/styles.css" rel="stylesheet">
-   
-</head>
-   
-<body>
-<div class="container">
-
-    <header></header>
-
-    <div id="main">
-        <h1>Silex Skeleton</h1>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        {% block content %}{% endblock %}
-    </div>
+        <link rel="stylesheet" href="{{ app.request.basepath }}/css/bootstrap/bootstrap.css">
+        <style>
+          body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+          }
+        </style>
+        <link rel="stylesheet" href="{{ app.request.basepath }}/css/bootstrap/bootstrap-responsive.css">
+        <link rel="stylesheet" href="{{ app.request.basepath }}/css/styles.css">
 
-    <footer></footer>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="#">Project name</a>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </div>
 
-</div>
+        <div class="container">
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+            {% block content %}{% endblock %}
+            <hr>
 
+            <footer>
+                <p>&copy; Company 2012</p>
+            </footer>
 
-</body>
+        </div> <!-- /container -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/libs/jquery-1.8.0.min.js"><\/script>')</script>
+
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-transition.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-alert.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-modal.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-dropdown.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-scrollspy.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-tab.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-tooltip.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-popover.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-button.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-collapse.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-carousel.js"></script>
+        <script src="{{ app.request.basepath }}/js/bootstrap/bootstrap-typeahead.js"></script>
+
+        <script src="{{ app.request.basepath }}/js/script.js"></script>
+    </body>
 </html>
