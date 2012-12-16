@@ -1,7 +1,7 @@
 Silex Skeleton
 ==============
 
-This is a small silex keleton I use for personal projects
+This is a small silex skeleton I use for personal projects
 
 Installation / Usage
 --------------------
